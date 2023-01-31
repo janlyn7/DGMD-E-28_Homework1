@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All About Me!</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<style>
+.mySlides {display:none;}
+</style>
+
+
+<body class="w3-container">
+    <div class="w3-sidebar w3-bar-block w3-black w3-card" style="width:150px">
+        <h3 class="w3-bar-item">Menu</h3>
+        <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Origin')">Where I am From</button>
+        <button class="w3-bar-item w3-button tablink" onclick="openLink(event,'Major')">My Major</button>
+        <button class="w3-bar-item w3-button tablink" onclick="openLink(event,'WebSkills')">Programming Experience</button>
+        <button class="w3-bar-item w3-button tablink" onclick="openLink(event,'Place')">My Favorite Place</button>
+        <button class="w3-bar-item w3-button tablink" onclick="openLink(event,'Restaurant')">My Favorite Restaurant</button>
+        <button class="w3-bar-item w3-button tablink" onclick="openLink(event,'Subscribe')">Subscribe to My Newsletter</button>
+    </div>
+
+    <div style="margin-left:150px">
+        <div class="w3-light-grey w3-card w3-center">
+            <h1>Assignment #1</h1>
+            <h3>by Janine Lyn</h3>
+        </div>
+        <div id="Origin" class="item w3-container w3-animate-opacity w3-padding" style="display:none">
+            <h2>Where I am From</h2>
+            <p>I am originally from Jamaica, but grew up Houston, TX.  I came to Boston for university and ended up staying.</p>
+        </div>
+
+        <div id="Major" class="item w3-container w3-animate-opacity w3-padding" style="display:none">
+            <h2>My Major</h2>
+            <p></p>
+        </div>
+
+        <div id="WebSkills" class="item w3-container w3-animate-opacity w3-padding" style="display:none">
+            <h2>Programming Experience</h2>
+            <p></p>
+        </div>
+
+        <div id="Place" class="item w3-container w3-animate-opacity w3-padding" style="display:none">
+            <h2>My Favorite Place</h2>
+            <p>This is a tough one.  I think I really love being at the beach. Yes, I'm definitely a beach bunny, which
+                begs the question, <i>why am I still living in New England?</i>.</p>
+
+            <div class="w3-content w3-display-container" style="max-width:800px">
+                <div class="w3-display-container mySlides">
+                    <img src="images/DSC_4035.jpg" style="width:100%" alt="Florida Keys">
+                <div class="w3-display-bottomright w3-container w3-padding-16 w3-black">
+                    Florida Keys
+                </div>
+                </div>
+
+                <div class="w3-display-container mySlides">
+                    <img src="images/DSC_6089.jpg" style="width:100%" alt="Kauai, Hawaii">
+                <div class="w3-display-bottomright w3-container w3-padding-16 w3-black">
+                    Kauai, Hawaii
+                </div>
+                </div>
+
+                <div class="w3-display-container mySlides">
+                    <img src="images/IMG_7348.jpg" style="width:100%" alt="Turks and Caicos">
+                <div class="w3-display-bottomright w3-container w3-padding-16 w3-black">
+                    Turks & Caicos
+                </div>
+                </div>
+
+                <div>
+                <button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+<button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+                </div>
+
+                <div style="font-size:12px">
+                All images courtesy of Janine Lyn
+                </div>
+            </div>
+
+        </div>
+
+        <div id="Restaurant" class="item w3-container w3-animate-opacity w3-padding" style="display:none">
+            <h2>My Favorite Restaurant</h2>
+            <p>
+                In terms of all out decadence, my favorite restaurant is  <a href="https://www.aupieddecochon.ca/us/">Au Pied de Cochon</a> in Montreal, Quebec, Canada.
+                The <i>Duck in a Can</i> is divine! Definitely make reservations at least 6 weeks in advance.
+                <br/><br/>
+                Here is a blog post about one person's experience dining at Au Pied de Cochon with photos:
+                <br/>
+                <iframe src="https://wareontheglobe.com/tag/anthony-bourdain-au-pied-du-cochon/"
+                        title="Menu" width="75%" height="600" style="border:1px solid black;">
+                </iframe>
+            </p>
+        </div>
+
+        <div id="Subscribe" class="item w3-container w3-animate-opacity w3-padding" style="display:none">
+            <h2>Subscribe to My Newsletter</h2>
+            <br/>
+                If you would like to hear more about me and my travels, please subscribe to my newsletter by entering your contact information below:
+            <form class="w3-container" action="">
+                <p>
+                <label class="w3-text-black"><b>First Name</b></label>
+                <input class="w3-input w3-border w3-light-gray" name="first" type="text">
+                </p>
+                <p>
+                <label class="w3-text-black"><b>Last Name</b></label>
+                <input class="w3-input w3-border w3-light-gray" name="last" type="text">
+                </p>
+                <p>
+                <label class="w3-text-black"><b>Email</b></label>
+                <input class="w3-input w3-border w3-light-gray" name="last" type="email">
+                </p>
+                <p>
+                <input class="w3-check" type="checkbox">
+                <label>By checking this box, you are acknowledging permission to be added to the mailing list</label>
+                </p>
+                <p>
+                <button class="w3-btn w3-gray">Submit</button>
+                </p>
+            </form>
+        </div>
+    </div>
+    &nbsp;&nbsp;
+
+
+
+<script>
+function openLink(evt, animName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("item");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(animName).style.display = "block";
+  evt.currentTarget.className += " w3-red";
+}
+
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+</script>
+</body>
+</html>
